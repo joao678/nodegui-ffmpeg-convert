@@ -7,7 +7,8 @@ import { dragDropEventPadrao } from './dragDropEventPadrao';
 const CAMINHO_FFMPEG = 'C:\\Program Files (x86)\\ffmpeg\\bin\\';
 
 const win = new QMainWindow();
-win.setFixedSize(586, 290);
+//win.setFixedSize(586, 290);
+win.setFixedSize(500, 290);
 win.setWindowTitle("Convert");
 
 const centralBox = new QWidget();
@@ -26,7 +27,7 @@ centralBox.setLayout(rootLayout);
 
 const label = new QLabel();
 label.setObjectName("instructionLabel");
-label.setText("Arraste um clipe em um determinado ícone para converte-lo para o formato aceito");
+label.setText("Arraste um clipe para um determinado ícone\npara converte-lo para o formato aceito pelo aplicativo!");
 label.setStyleSheet(`
     #instructionLabel {
         color: white;
