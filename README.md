@@ -1,59 +1,55 @@
-# nodegui-starter
+# ffmpeg converter
 
-**Clone and run for a quick way to see NodeGui in action.**
+**Um pequeno aplicativo para converter clipes(.mp4) para determinadas plataformas.**
 
-## To Use
+![alt text](app.png "Aplicativo")
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.
+## Usando
 
-Make sure you have met the requirements listed here: https://docs.nodegui.org/docs/guides/getting-started#developer-environment
+Clone o repositório com o  [Git](https://git-scm.com) e rode com [Node.js](https://nodejs.org/en/download/)
 
-From your command line:
+Abra um prompt de comando e digite:
 
 ```bash
-# Clone this repository
-git clone https://github.com/nodegui/nodegui-starter
-# Go into the repository
+# Clona o repositório
+git clone https://github.com/joao678/nodegui-ffmpeg-convert
+# Vá dentro do repositório
 cd nodegui-starter
-# Install dependencies
+# Instale as dependências com o NPM
 npm install
-# Run the app
+# Rode o aplicativo
 npm start
 ```
 
-## Resources for Learning NodeGui
+## Distribuindo o aplicativo como executável
 
-- [docs.nodegui.org](https://nodegui.github.io/nodegui) - all of NodeGui and React Desktop's documentation
+Para distribuir é só usar o [@nodegui/packer](https://github.com/nodegui/packer)
 
-## Packaging app as a distributable
-
-In order to distribute your finished app, you can use [@nodegui/packer](https://github.com/nodegui/packer)
-
-### Step 1: (_**Run this command only once**_)
+### Passo 1: (_**Rode esse comando apenas uma vez**_)
 
 ```sh
-npx nodegui-packer --init MyAppName
+npx nodegui-packer --init FFmpegConvert
 ```
 
-This will produce the deploy directory containing the template. You can modify this to suite your needs. Like add icons, change the name, description and add other native features or dependencies. Make sure you commit this directory.
+Esse comando gera as pastas necessárias onde será colocado o build
 
-### Step 2: (_**Run this command every time you want to build a new distributable**_)
+### Passo 2: (_**Rode esse comando quando quiser gerar um novo executável**_)
 
-Next you can run the pack command:
+Para gerar os arquivos:
 
 ```sh
 npm run build
 ```
 
-This will produce the js bundle along with assets inside the `./dist` directory
+Esse comando irá produzir um pacote dentro da pasta `./dist`
 
 ```sh
 npx nodegui-packer --pack ./dist
 ```
 
-This will build the distributable using @nodegui/packer based on your template. The output of the command is found under the build directory. You should gitignore the build directory.
+Esse comando irá gerar o executável dentro da pasta `./deploy/win32/build`, após isso é só rodar o `qode.exe`
 
-More details about packer can be found here: https://github.com/nodegui/packer
+Mais detalhes sobre o empacotador podem ser encontrados aqui: https://github.com/nodegui/packer
 
 ## License
 
