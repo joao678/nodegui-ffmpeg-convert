@@ -4,6 +4,9 @@
 
 ![alt text](app.png "Aplicativo")
 
+## Obtendo
+Obtenha o zip do último [release](https://github.com/joao678/nodegui-ffmpeg-convert/releases)
+
 ## Usando
 
 Clone o repositório com o  [Git](https://git-scm.com) e rode com [Node.js](https://nodejs.org/en/download/)
